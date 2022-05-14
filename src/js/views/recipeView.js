@@ -2,7 +2,7 @@
 import View from './view.js';
 import icons from 'url:../../img/icons.svg'; // parcel 2
 // console.log(icons);
-import { Fraction } from 'fractional'; // wcześniej: npm install fractional
+import { Fraction } from 'fractional.js'; // wcześniej: npm install fractional
 // console.log(Fraction);
 class RecipeView extends View {
   _parentElement = document.querySelector('.recipe');
