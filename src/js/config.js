@@ -6,7 +6,7 @@ export const MODEL_CLOSE_SEC = 2.5;
 
 /*
 git add -A                => adds all changed files exept .gitignore
-git commit - m 'message'  => commits files and set descriptive message
+git commit -m 'message'  => commits files and set descriptive message
 git push origin master    => saves the master branch to the origin i gitHub
 
 
