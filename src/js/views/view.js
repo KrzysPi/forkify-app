@@ -7,6 +7,7 @@ export default class View {
     if (!data || (Array.isArray(data) && data.length === 0))
       // Jeżeli data nie istnieje(null or undefined)  ||(or) jeżeli jest to tablica &&(and) ta tablica ma 0 obiektów to renderError()
       return this.renderError();
+
     this._data = data; // tutaj pobieramy dane z model.js
     const markup = this._generateMarkup();
 
