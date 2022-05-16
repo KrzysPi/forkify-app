@@ -90,6 +90,16 @@
   }
 }
 
+.num_pages {
+  color: $color-primary;
+  font-size: 1.3rem;
+  margin: auto 120;
+  padding: 0.8rem 1.2rem;
+
+  display: flex;
+  // align-items: center;
+}
+
 .btn--round {
   background-image: $gradient;
   border-radius: 50%;
