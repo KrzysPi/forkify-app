@@ -31,7 +31,7 @@ class PaginationView extends View {
     </button>`;
     // console.log(numPages);
 
-    const numPagesView = `<span class="num_pages pagination__btn"> ${numPages} pages</span>`;
+    const numPagesView = `<span class="num__pages"> ${numPages} pages</span>`;
 
     // Page 1 there are other pages
     if (curPage === 1 && numPages > 1) {
