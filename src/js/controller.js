@@ -128,10 +128,11 @@ const controlAddRecipe = async function (newRecipe) {
   // sends recipe to model.js which Uploads recipe to API
   // console.log(newRecipe);
   try {
-    // schow loading spinner
+    // Schow loading spinner
     addRecipeView.renderSpiner();
+
+    // Update new recipe data
     await model.uploadRecipe(newRecipe);
-    console.log(model.state.recipe);
 
     // Render Recipe
     recipeView.render(model.state.recipe);
@@ -144,7 +145,7 @@ const controlAddRecipe = async function (newRecipe) {
     // urzywamy rende nie upadet bo musimy dodać do bookmarks
 
     // Change ID in URL
-    window.history.pushState(null, `#${model.state.recipe.id}`);
+    window.history.pushState(null, ``, `#${model.state.recipe.id}`);
     // pushState (state, title, URL )
     // window.history.back() - pozwala nam wrócić do poprzedniej strony
 
@@ -156,6 +157,7 @@ const controlAddRecipe = async function (newRecipe) {
     console.error(`💥`, err);
     addRecipeView.renderError(err.message);
   }
+  location.reload();
 };
 
 const init = function () {

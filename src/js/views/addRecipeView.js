@@ -7,8 +7,8 @@ class AddRecipeView extends View {
   // E308
   _message = `Recipe was successfully uploaded :)`;
 
-  _window = document.querySelector('.add-recipe-window');
-  _overlay = document.querySelector('.overlay');
+  _window = document.querySelector('.add-recipe-window'); // popup po upload
+  _overlay = document.querySelector('.overlay'); // do wypełnineia
   _btnOpen = document.querySelector('.nav__btn--add-recipe');
   _btnClose = document.querySelector('.btn--close-modal');
   _btnUpload = document.querySelector('.btn upload__btn');
@@ -20,7 +20,7 @@ class AddRecipeView extends View {
   }
 
   toggleWindow() {
-    this._overlay.classList.toggle('hidden'); // w tym wypadku `this` wskazuje na button wić musimy przeżucić do odrębnej metody  // togle zmiania stan w zależności od stanu początkowego (jeżeli było hidden to zamiania na nie ma i odwrotnie)
+    this._overlay.classList.toggle('hidden'); // w tym wypadku `this` wskazuje na button więc musimy przeżucić do odrębnej metody  // togle zmiania stan w zależności od stanu początkowego (jeżeli było hidden to zamiania na nie ma i odwrotnie)
     this._window.classList.toggle('hidden');
   }
 
@@ -29,7 +29,7 @@ class AddRecipeView extends View {
       'click',
       this.toggleWindow.bind(this) // dzieki temu przypisujemy `this` do funkcji toggleWindow
       //  function () {
-      //   this._overlay.classList.toggle(`hidden`); // w tym wypadku `this` wskazuje na button wić musimy przeżucić do odrębnej metody  // togle zmiania stan w zależności od stanu początkowego (jeżeli było hidden to zamiania na nie ma i odwrotnie)
+      //   this._overlay.classList.toggle(`hidden`); // w tym wypadku `this` wskazuje na button więc musimy przeżucić do odrębnej metody  // togle zmiania stan w zależności od stanu początkowego (jeżeli było hidden to zamiania na nie ma i odwrotnie)
       //   this._window.classList.toggle(`hidden`);
       // }
     );
