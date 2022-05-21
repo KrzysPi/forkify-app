@@ -125,16 +125,16 @@ class RecipeView extends View {
         }</span>. Please check out
         directions at their website.
       </p>
-      <a input type="url"
+      <a 
         class="btn--small recipe__btn"
         href="${this._data.sourceUrl}"
         target="_blank"
       >
-        <span>Directions</span>
-        <svg class="search__icon">
-        <use href="${icons}#icon-arrow-right"></use>
-        </svg>
-        </a>
+      <span>Directions</span>
+      <svg class="search__icon">
+      <use href="${icons}#icon-arrow-right"></use>
+      </svg>
+      </a>
         </div>
         `;
   }

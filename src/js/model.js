@@ -151,13 +151,13 @@ const init = function () {
 };
 
 init();
-console.log(state.bookmarks);
+// console.log(state.bookmarks);
 
 const cleareBookmarks = function () {
   localStorage.clear(`bookmarks`);
   // Czyści localStorage przydatne do testów
 };
-// cleareBookmarks();
+cleareBookmarks();
 
 // E308 ///////////////////////// Upload Recipe /////////////////////////////////////////////////
 
@@ -190,8 +190,8 @@ export const uploadRecipe = async function (newRecipe) {
 
     const recipe = {
       title: newRecipe.title,
-      source_url: newRecipe.sourceUrl,
-      image_url: newRecipe.image,
+      source_url: newRecipe.sourceUrl === `` ? `No URL` : newRecipe.sourceUrl,
+      image_url: newRecipe.image === `` ? `No Image` : newRecipe.image,
       publisher: newRecipe.publisher,
       cooking_time: +newRecipe.cookingTime,
       servings: +newRecipe.servings,
