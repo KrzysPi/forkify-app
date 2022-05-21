@@ -51,7 +51,7 @@ class RecipeView extends View {
   _generateMarkup() {
     return `
     <figure class="recipe__fig">
-      <img src="${this._data.image}" alt="${
+      <img input type="url" src="${this._data.image}" alt="${
       this._data.title
     }" class="recipe__img" />
       <h1 class="recipe__title">
@@ -125,7 +125,7 @@ class RecipeView extends View {
         }</span>. Please check out
         directions at their website.
       </p>
-      <a
+      <a input type="url"
         class="btn--small recipe__btn"
         href="${this._data.sourceUrl}"
         target="_blank"
