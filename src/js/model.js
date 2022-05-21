@@ -191,7 +191,10 @@ export const uploadRecipe = async function (newRecipe) {
     const recipe = {
       title: newRecipe.title,
       source_url: newRecipe.sourceUrl === `` ? `No URL` : newRecipe.sourceUrl,
-      image_url: newRecipe.image === `` ? `No Image` : newRecipe.image,
+      image_url:
+        newRecipe.image === ``
+          ? `https://wedevelopment.in/wp-content/uploads/2019/08/no_image_png_934948.jpg`
+          : newRecipe.image,
       publisher: newRecipe.publisher,
       cooking_time: +newRecipe.cookingTime,
       servings: +newRecipe.servings,
